@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
+import CustomCursor from './components/CustomCursor';
 
 const feedbackFont = localFont({
   src: '../../public/fonts/feedback.otf',
@@ -25,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={feedbackFont.variable}>
-      <body className="font-feedback">{children}</body>
+      <body className="font-feedback">
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }

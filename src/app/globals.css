@@ -20,6 +20,33 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Custom cursor */
+
+.custom-cursor {
+  width: -150px;
+  height: -150px;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  animation: spin 2s linear infinite;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  color: white;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Define how elements transition between pages */
 ::view-transition-old(root),
 ::view-transition-new(root) {
