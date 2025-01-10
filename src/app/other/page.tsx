@@ -18,13 +18,12 @@ export default function Other() {
       
       <header className="flex justify-between items-start mb-16 relative">
         <div className="flex flex-col gap-2">
-          <Link 
-            href="/other"
+          <h1 
             className="text-2xl font-feedback tracking-wider whitespace-nowrap"
             style={{ viewTransitionName: 'title' }}
           >
             other mediums
-          </Link>
+          </h1>
           <Link 
             href="/"
             className="text-sm hover:opacity-60 transition-opacity"

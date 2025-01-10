@@ -18,13 +18,12 @@ export default function GrossMargins() {
       
       <header className="flex justify-between items-start mb-16 relative">
         <div className="flex flex-col gap-2">
-          <Link 
-            href="/gross-margins"
+          <h1 
             className="text-2xl font-feedback tracking-wider whitespace-nowrap"
             style={{ viewTransitionName: 'title' }}
           >
             gross margins
-          </Link>
+          </h1>
           <Link 
             href="/"
             className="text-sm hover:opacity-60 transition-opacity"
