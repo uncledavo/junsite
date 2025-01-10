@@ -23,21 +23,21 @@ body {
 /* Define how elements transition between pages */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 0.5s;
+  animation-duration: 0.8s;
 }
 
 /* Fade transition */
 ::view-transition-old(root) {
-  animation: fade-out 0.5s ease-in-out;
+  animation: fade-out 0.8s ease-in-out;
 }
 
 ::view-transition-new(root) {
-  animation: slide-fade 0.5s ease-out;
+  animation: slide-fade 0.8s ease-out;
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  0% { opacity: 0; }
+  100% { opacity: 0.8; }
 }
 
 @keyframes fade-out {
@@ -60,12 +60,12 @@ body {
 /* Specific element transitions */
 ::view-transition-old(title),
 ::view-transition-new(title) {
-  animation: slide 0.5s ease-in-out;
+  animation: slide 0.8s ease-in-out;
 }
 
 ::view-transition-old(content),
 ::view-transition-new(content) {
-  animation: fade 0.5s ease-in-out;
+  animation: fade 0.8s ease-in-out;
 }
 
 @font-face {
@@ -74,4 +74,17 @@ body {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+@keyframes fade-in-light {
+  0% { opacity: 0; }
+  100% { opacity: 0.3; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-in-out forwards;
+}
+
+.animate-fade-in-light {
+  animation: fade-in-light 0.3s ease-in-out forwards;
 }
