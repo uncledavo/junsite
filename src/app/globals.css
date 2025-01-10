@@ -22,9 +22,6 @@ body {
 
 /* Custom cursor - only on desktop */
 @media (min-width: 768px) {
-  * {
-    cursor: none !important;
-  }
 
   .custom-cursor {
     width: -150px;
