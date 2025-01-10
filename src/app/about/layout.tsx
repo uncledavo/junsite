@@ -14,9 +14,9 @@ export default function AboutLayout({
         priority
         quality={75}
         className="object-cover z-[-1] opacity-30 transition-opacity duration-500"
-        sizes="100vw"
+        sizes="(max-width: 640px) calc(100vw - 4rem), calc(100vw - 10rem)"
         placeholder="blur"
-        blurDataURL="data:image/jpeg;base64,/9j..."
+        blurDataURL="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
       />
       {children}
     </div>

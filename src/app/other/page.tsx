@@ -9,11 +9,11 @@ export default function Other() {
         alt="Background"
         fill
         priority
-        quality={100}
+        quality={75}
         className="object-cover z-[-1] opacity-80"
-        sizes="100vw"
+        sizes="(max-width: 640px) calc(100vw - 4rem), calc(100vw - 10rem)"
         placeholder="blur"
-        blurDataURL="data:image/jpeg;base64,/9j..."
+        blurDataURL="data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
       />
       
       <header className="flex justify-between items-start mb-16 relative">
