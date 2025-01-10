@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function ZJ() {
+export default function GrossMargins() {
   return (
     <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] flex flex-col justify-between relative">
       <Image
-        src="/zjo.wepb"
+        src="/zjo.webp"
         alt="Background"
         fill
         priority
@@ -16,19 +16,23 @@ export default function ZJ() {
         blurDataURL="data:image/jpeg;base64,/9j..."
       />
       
-      <header className="flex flex-col items-start gap-2">
-        <Link 
-          href="/"
-          className="text-sm hover:opacity-60 transition-opacity font-sans"
-        >
-          go home
-        </Link>
-        <h1 
-          className="text-2xl font-feedback tracking-wider"
-          style={{ viewTransitionName: 'title' }}
-        >
-          zj☻
-        </h1>
+      <header className="flex justify-between items-start mb-16 relative">
+        <div className="flex flex-col gap-2">
+          <Link 
+            href="/gross-margins"
+            className="text-2xl font-feedback tracking-wider"
+            style={{ viewTransitionName: 'title' }}
+          >
+            zj☻
+          </Link>
+          <Link 
+            href="/"
+            className="text-sm hover:opacity-60 transition-opacity"
+          >
+            go home
+          </Link>
+        </div>
+        <div className="w-[200px]" />
       </header>
     </div>
   );
