@@ -9,7 +9,7 @@ export default function WebsiteModal() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="font-feedback tracking-wider transition-all duration-200 text-xl block"
+        className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] text-xl block"
       >
         website
       </button>

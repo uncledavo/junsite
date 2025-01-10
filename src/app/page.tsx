@@ -11,7 +11,7 @@ export default function Home() {
         alt="Background"
         fill
         priority
-        quality={75}
+        quality={100}
         className="object-cover z-[-1] opacity-80"
         sizes="100vw"
         placeholder="blur"
