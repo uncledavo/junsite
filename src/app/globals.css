@@ -19,3 +19,51 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Define how elements transition between pages */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.5s;
+}
+
+/* Fade transition */
+::view-transition-old(root) {
+  animation: fade-out 0.5s ease-in-out;
+}
+
+::view-transition-new(root) {
+  animation: slide-fade 0.5s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Slide and fade combination */
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Specific element transitions */
+::view-transition-old(title),
+::view-transition-new(title) {
+  animation: slide 0.5s ease-in-out;
+}
+
+::view-transition-old(content),
+::view-transition-new(content) {
+  animation: fade 0.5s ease-in-out;
+}
