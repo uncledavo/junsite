@@ -67,3 +67,11 @@ body {
 ::view-transition-new(content) {
   animation: fade 0.5s ease-in-out;
 }
+
+@font-face {
+  font-family: 'feedback';
+  src: url('/fonts/feedback.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

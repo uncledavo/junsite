@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import WebsiteModal from './components/WebsiteModal';
 
 export default function Home() {
   return (
@@ -21,18 +22,18 @@ export default function Home() {
       <header className="flex justify-between items-start mb-16 relative">
         <Link 
           href="/about"
-          className="text-lg font-medium hover:opacity-60 transition-opacity"
+          className="text-2xl font-feedback tracking-wider"
           style={{ viewTransitionName: 'title' }}
         >
           hi i&apos;m jun
         </Link>
         
         <nav>
-          <ul className="flex flex-col gap-2 text-sm">
-          <li>
+          <ul className="flex flex-col gap-2 text-xl">
+            <li>
               <Link 
                 href="/gross-margins"
-                className="transition-all duration-200 hover:blur-[2px] text-right block"
+                className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] text-right block"
               >
                 gross margins
               </Link>
@@ -40,7 +41,7 @@ export default function Home() {
             <li>
               <Link 
                 href="/zj"
-                className=" transition-all duration-200 hover:blur-[2px] text-right block"
+                className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] text-right block"
               >
                 zj☻
               </Link>
@@ -48,7 +49,7 @@ export default function Home() {
             <li>
               <Link 
                 href="/mixes"
-                className=" transition-all duration-200 hover:blur-[2px] text-right block"
+                className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] text-right block"
               >
                 mixes as journal entries
               </Link>
@@ -56,7 +57,7 @@ export default function Home() {
             <li>
               <Link 
                 href="/other"
-                className=" transition-all duration-200 hover:blur-[2px] text-right block"
+                className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] text-right block"
               >
                 other mediums
               </Link>
@@ -65,9 +66,9 @@ export default function Home() {
         </nav>
       </header>
 
-      <footer className="flex gap-6 flex-wrap items-center text-sm pl-0 relative">
+      <footer className="flex flex-col gap-2 items-start text-xl pl-0 relative">
         <a
-          className="underline transition-all duration-200 hover:blur-[2px]"
+          className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] block"
           href="https://www.instagram.com/zj_smiles/"
           target="_blank"
           rel="noopener noreferrer"
@@ -75,13 +76,14 @@ export default function Home() {
           instagram
         </a>
         <a
-          className="underline transition-all duration-200 hover:blur-[2px]"
+          className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] block"
           href="https://soundcloud.com/zjsmiles"
           target="_blank"
           rel="noopener noreferrer"
         >
           soundcloud
         </a>
+        <WebsiteModal />
       </footer>
     </div>
   );

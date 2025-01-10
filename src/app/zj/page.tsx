@@ -19,12 +19,12 @@ export default function ZJ() {
       <header className="flex flex-col items-start gap-2">
         <Link 
           href="/"
-          className="text-sm hover:opacity-60 transition-opacity"
+          className="text-sm hover:opacity-60 transition-opacity font-sans"
         >
           go home
         </Link>
         <h1 
-          className="text-lg font-medium"
+          className="text-2xl font-feedback tracking-wider"
           style={{ viewTransitionName: 'title' }}
         >
           zj☻
