@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import dynamic from 'next/dynamic'
 import localFont from 'next/font/local'
 import "./globals.css";
-
-// Dynamically import CustomCursor with loading disabled to defer its loading
-const CustomCursor = dynamic(() => import('./components/CustomCursor'), {
-  ssr: false, // Disable server-side rendering since cursor is client-side only
-  loading: () => null // No loading state needed for cursor
-})
+import CursorWrapper from './components/cursor-wrapper';
 
 const feedbackFont = localFont({
   src: '../../public/fonts/feedback.otf',
@@ -35,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={feedbackFont.variable}>
       <body className="font-feedback">
-        <CustomCursor />
+        <CursorWrapper />
         {children}
       </body>
     </html>
