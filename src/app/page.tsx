@@ -62,7 +62,7 @@ export default function Home() {
       <footer className="flex flex-col gap-2 items-start text-xl pl-0 relative">
         <a
           className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] block"
-          href="https://www.instagram.com/zj_smiles/"
+          href="https://www.instagram.com/gross_margins/"
           target="_blank"
           rel="noopener noreferrer"
         >
