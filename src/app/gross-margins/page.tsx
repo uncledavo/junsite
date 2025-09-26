@@ -3,17 +3,17 @@ import BackgroundImage from '../components/BackgroundImage';
 
 export default function GrossMargins() {
   return (
-    <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] flex flex-col justify-between relative">
+    <div className="min-h-screen p-8 pb-8 gap-2 sm:p-20 font-[family-name:var(--font-geist-sans)] flex flex-col relative">
       <BackgroundImage
         src="/gross.avif"
         alt="Background"
         className="opacity-0 animate-fade-in"
       />
       
-      <header className="flex justify-between items-start mb-16 relative">
+      <header className="flex justify-between items-start mb-8 relative">
         <div className="flex flex-col gap-2">
           <h1 
-            className="text-2xl font-feedback tracking-wider whitespace-nowrap"
+            className="text-2xl font-feedback tracking-wider"
             style={{ viewTransitionName: 'title' }}
           >
             gross margins
@@ -27,6 +27,11 @@ export default function GrossMargins() {
         </div>
         <div className="w-[200px]" />
       </header>
+      <div className="text-white">
+          <p className="text-2xl font-bold max-w-2xl tracking-wider">
+            coming soon
+          </p>
+      </div>
     </div>
   );
 } 

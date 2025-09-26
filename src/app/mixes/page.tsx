@@ -3,7 +3,7 @@ import BackgroundImage from '../components/BackgroundImage';
 
 export default function Mixes() {
   return (
-    <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] flex flex-col justify-between relative">
+    <div className="min-h-screen p-8 pb-8 gap-2 sm:p-20 font-[family-name:var(--font-geist-sans)] flex flex-col justify-between relative">
       <BackgroundImage
         src="/mixes.avif"
         alt="Background"
