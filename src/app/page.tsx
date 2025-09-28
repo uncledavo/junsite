@@ -33,7 +33,7 @@ export default function Home() {
             </li>
             <li>
               <Link 
-                href="/zj"
+                href="/zjsmiles"
                 className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] text-right block"
               >
                 zj☻
