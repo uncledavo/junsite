@@ -31,7 +31,7 @@ export default function ZJ() {
           <p className="text-2xl font-bold max-w-2xl tracking-wider">
             Play, Though? 
           </p>
-          <p className="text-sm font-normal">EP to be released 25/01/2025</p>
+          <p className="text-sm font-normal">EP, released 25/01/2025</p>
 
           <p className="mt-6 text-l italic max-w-2xl tracking-wider">
           I foraged in the forest of Gott, but <br />
@@ -39,6 +39,12 @@ export default function ZJ() {
           Rushed to leave in glut, the bowl Tilt-ed, <br />  
           slowly falling onto the ground, I Gasp.<br />
           </p>
+          <iframe 
+            className="mt-6"
+            style={{ border: 0, width: '280px', height: '280px' }} 
+            src="https://bandcamp.com/EmbeddedPlayer/album=1345805150/size=large/bgcol=333333/linkcol=ffffff/minimal=true/transparent=true/" 
+            seamless
+          />
       </div>
       <div className="text-white mt-16">
           <Link href="https://findmerecords.bandcamp.com/album/concrete-jungle" className="text-2xl font-bold max-w-2xl tracking-wider">
@@ -46,12 +52,13 @@ export default function ZJ() {
           </Link>
           <p className="text-sm font-normal tracking-wider">EP, released 23/03/2024</p>
           <p className="mt-6 text-l tracking-wider max-w-2xl font-normal">
-          After spending my formative years in the UK, I returned to Hong Kong as an auditor, only to discover my 10-year-old memories serve me. This EP is my memoir of the Yellow Umbrella movement protests, COVID-19, quitting my first corporate job, and saying goodbye to my childhood home.
+          After spending my formative years in the UK, I returned to Hong Kong as an auditor, only to discover a stark contrast from my memories as a 10-year-old. This EP is my memoir of the Yellow Umbrella movement protests, COVID-19, and quitting my first corporate job to follow my passions, and saying goodbye to my childhood home.
+
           </p>
           <iframe 
             className="mt-6" 
             style={{ border: 0, width: '280px', height: '280px' }} 
-            src="https://bandcamp.com/EmbeddedPlayer/album=3342620367/size=large/bgcol=333333/linkcol=ffffff/minimal=true/transparent=true/" 
+            src="https://bandcamp.com/EmbeddedPlayer/album=3342620367/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" 
             seamless
           />
       </div>
