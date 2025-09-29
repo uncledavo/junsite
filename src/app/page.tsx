@@ -70,6 +70,14 @@ export default function Home() {
         </a>
         <a
           className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] block"
+          href="https://www.instagram.com/gravitate_au/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          gravitate
+        </a>
+        <a
+          className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] block"
           href="https://soundcloud.com/zjsmiles"
           target="_blank"
           rel="noopener noreferrer"
