@@ -12,7 +12,7 @@ const feedbackFont = localFont({
 
 export const metadata: Metadata = {
   title: "jun",
-  description: "jun's website - also known as zj smiles / grossmargins",
+  description: "jun's website - dj and producer also known as zj smiles / grossmargins",
 };
 
 // Add view transitions metadata
