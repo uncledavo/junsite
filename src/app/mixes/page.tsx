@@ -1,9 +1,111 @@
 import Link from "next/link";
 import BackgroundImage from '../components/BackgroundImage';
+import FaqDisclosure from '../components/faq-disclosure';
+
+const faqs = [
+  {
+    title: '[untitled] Solace Radio (August 2025)',
+    linkHref: 'https://on.soundcloud.com/xAsmDIJwwHJ4xgAIlA',
+    linkText: 'Listen on SoundCloud',
+    embedHtml:
+      '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2156630022&color=%2352504c&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/solace-bar-radio" title="Solace Radio" target="_blank" style="color: #cccccc; text-decoration: none;">Solace Radio</a> · <a href="https://soundcloud.com/solace-bar-radio/solace-radio-ep30-gross-margins" title="Solace Radio Ep.30 | Gross Margins" target="_blank" style="color: #cccccc; text-decoration: none;">Solace Radio Ep.30 | Gross Margins</a></div>',
+    descriptionHtml:
+      'Slow is smooth, smooth is fast. I’ve been trying to decide to filter out things that don’t bring me joy, especially chasing after things that only bring short-term dopamine hits. I guess the influence from listening to Ruo’s sets and having had the privilege to record a mix with her on <a href="https://on.soundcloud.com/8RXe98qud9EYXqmxGQ" target="_blank" rel="noreferrer noopener" class="underline">Gravitate</a> first episode this year is really tied to the idea that there are slower subtleties in life that have as big as an impact as those bigger in-your-face ones.',
+    tracklistImageSrc: '/asolacemix.jpg',
+    tracklistImageAlt: 'Solace Mix Tracklist',
+  },
+  {
+    title: '[untitled] Skylab Mix for Thread (April 2025)',
+    linkHref: 'https://on.soundcloud.com/9gfVjdHl9b1zLCRJAe',
+    linkText: 'Listen on SoundCloud',
+    embedHtml:
+      '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2083381296&color=%233c344c&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/zjsmiles" title="gross margins" target="_blank" style="color: #cccccc; text-decoration: none;">gross margins</a> · <a href="https://soundcloud.com/zjsmiles/thread-on-skylab-e1" title="Thread on Skylab E1" target="_blank" style="color: #cccccc; text-decoration: none;">Thread on Skylab E1</a></div>',
+    description:
+      'I thought I wanted to stop chasing love again. Past habits and patterns, perhaps not fully knowing who I am and who I want to be in life. I think this is the beginning of that reflection. I also met someone who mirrored in this inverted way, pushing out the flaws in myself but for some reason I’m not getting the responses I normally would expect. Really throwing me off that pattern. They make me feel like I can and want to challenge myself to do what I normally wouldn’t do. I feel like I really can do it. I want to do it for myself and for whoever I’m lucky enough to share my life with.',
+    tracklistNote: 'No Tracklist',
+  },
+  {
+    title: 'Love On, Planet Earth – Space Jams (September 2024)',
+    linkHref: 'https://www.youtube.com/watch?v=BXnqO9ff-sI',
+    linkText: 'Listen on YouTube',
+    embedHtml:
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/BXnqO9ff-sI?si=zYOsqYC_SJh97yjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    description:
+      'Love is delicate and intricate. It can be so warm one moment, but cold when taken away. Loving someone, or something can take time, or it can be instantaneous. Love can be romantic or platonic, and anthropomorphic too. But to sustain love healthily, maintenance is so crucial. Sometimes it’s easy, flows smoothly, and so sexy. Sometimes it’s realising you’re two human beings with opposing values.\n\nWhen I saw Actress perform at Miscellania for Now or Never at the end of August, I was surprised by how non-linear his set was. It felt as though he wanted to filter out the crowd to make space for those who would persevere to dance. Or maybe he reflected the energy of the room since it was so crowded and a mixed-bunch. I thought his set was amazing, it went to so many places, and it was one of those times where it was packed to the brim from the beginning, but simmered down perfectly to an intimate space at the end. I guess it’s the energy and anticipation everyone shared whilst it was so full, and as that space freed up, the energy remained.\n\nI guess this mix was the first time I’ve tried to emulate a non-linear progression, because of Actress I fully appreciated this style of mixing in a club. This kind of movement allowed me to play on how love can feel, how conversations and the heat of it all can bubble and rise in a hot second. Sometimes smooth, sometimes rough, sometimes exciting, sometimes sad.\n\nI’m grateful Sam invited me to do this mix for Space Jams too. The fact that it was quite last minute, and the one take I recorded came out perfectly just the way it needed to be, makes it feel even more special. Happy accidents like this make creating so worthwhile. I also cannot forget to mention Nicholas. I brought this mix to him the following night as he wanted to show me his most recent visual work, it was there we realised how perfectly it matched, and it later led to the formation of his frequency-guided visual event at the closing of D’Shut, where I was so fortunate to watch my friends perform such beautiful sets, particularly Steve’s.',
+    tracklistImageSrc: '/1. Love On, Planet Earth (SpaceJams) Tracklist.jpg',
+    tracklistImageAlt: 'Love On, Planet Earth (SpaceJams) Tracklist',
+  },
+  {
+    title: 'Vomit – Repeat Dance (June 2024)',
+    linkHref: 'https://youtu.be/NKJA5OTywag?feature=shared',
+    linkText: 'Listen on YouTube',
+    embedHtml:
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/NKJA5OTywag?si=ASm0k7250viUx6zX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    description:
+      'You know when you see something that’s gross, but you know it’s just from your angle, and it definitely has beauty from another perspective, but it still makes you regurgitate?\n\nThis is that feeling.\n\nThe first time collaborating with Nicholas on a project, thanks for blessing me with your work Nicholas.',
+    tracklistImageSrc: '/2. Vomit (Repeat Dance) Tracklist.jpg',
+    tracklistImageAlt: 'Vomit (Repeat Dance) Tracklist',
+  },
+  {
+    title: 'Inner Rage – Shy People (May 2024)',
+    linkHref: 'https://shypeople.cn/zjo-Mix',
+    linkText: 'Listen on Shy People',
+    embedHtml:
+      '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1843386957&color=%23587042&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/zjsmiles" title="gross margins" target="_blank" style="color: #cccccc; text-decoration: none;">gross margins</a> · <a href="https://soundcloud.com/zjsmiles/baihui-shy-people-mix-04-june-2024" title="Shy People Mix [inner rage]" target="_blank" style="color: #cccccc; text-decoration: none;">Shy People Mix [inner rage]</a></div>',
+    description:
+      'Growing up, my father was under a lot of stress because of his relationship with money. He was also not very in touch with his feelings (I think as he got older it’s improved a little but I don’t want to give him that validation), so his rage would snap out of nowhere, sometimes in the middle of an innocent joke. Like most children, I modelled after him and my mum, except she’s a lot more avoidant. The combination of these two makes me extremely volatile internally, but externally I hate losing composure. I guess anxiety has a huge role to play. This mix for me encapsulates that raw uncontrollable anger inside me that’s socially unacceptable to unleash. It also represents a chapter of my life where I’m a little more able to control and release this kind of anger healthily, but sometimes this rage just slips out of my hand, especially when I’m with someone whom I’ve reached some form of unconditional love with. I was angry with myself, for how I dealt with my emotions up to this month. Pure guilt, shame and anger.\n\nI’m grateful to have met some beautiful people in Australia. I was fortunate to have met Yang at Miscellania in late 2023, and he later introduced me to Evan, Steve, Rachel and Matt. Thank you Yang, and also thank you so much Evan for giving me the platform to broadcast this on Shy People through Baihui Radio - something about it all felt like such a full circle moment too. How I eventually met Steve, and how during the preparation of this mix, I recall speaking to Rachel about Matt’s anger during his stressful periods, and that motivated me more so to be in touch with my anger.',
+    tracklistImageSrc: '/3. Inner Rage (Shy People) Tracklist.jpg',
+    tracklistImageAlt: 'Inner Rage (Shy People) Tracklist',
+  },
+  {
+    title: 'Pilot – Gravitate (February 2024)',
+    linkHref: 'https://soundcloud.com/area3000/gravitate-zj-1-march-2024',
+    linkText: 'Listen on SoundCloud',
+    embedHtml:
+      '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1763706456&color=%23648896&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/area3000" title="Area 3000 Radio" target="_blank" style="color: #cccccc; text-decoration: none;">Area 3000 Radio</a> · <a href="https://soundcloud.com/area3000/gravitate-zj-1-march-2024" title="Gravitate 001 w. zj☻ - 1 March 2024" target="_blank" style="color: #cccccc; text-decoration: none;">Gravitate 001 w. zj☻ - 1 March 2024</a></div>',
+    description:
+      'With healing in progress, and returning to Naarm with a new lens, I think this mix represents taking on this new journey. The year before when I first moved, the parties I attended and enjoyed were heavily influenced by my mood, it was during 2023 when I began to enjoy subdued, inward, bass music. Thank you Sindy for such a great platform in Area3000, where the barrier to entry is so community-friendly. I am so grateful to be given two hours so that I can spotlight talented artists so that they can share and explore their feelings and journeys.\n\nWith this mix, I wanted to showcase exploration, with the whole show ‘Gravitate’ and its’ motif in mind, I want to set the tone for sharing and exploring. Through this, I am also able to curate and share informational content about random things that interest me. At the time, the mix was based around journeying, from taking off to landing at a new location, exploring the new environment and having fun. I think that was the new lens I had with Naarm. I was able to bond with so many beautiful people like Dave, Yang, Grace and Jesper. Thanks to them, I was able to meet even more stunning people.',
+    tracklistImageSrc: '/4. Pilot - Gravitate Tracklist.jpg',
+    tracklistImageAlt: 'Pilot - Gravitate Tracklist',
+  },
+  {
+    title: 'Rusty Reattachments – Rustival (February 2024)',
+    linkHref: 'https://on.soundcloud.com/AWpRaQnSW6VwjQmg9',
+    linkText: 'Listen on SoundCloud',
+    embedHtml:
+      '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1741524573&color=%23282622&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/zjsmiles" title="gross margins" target="_blank" style="color: #cccccc; text-decoration: none;">gross margins</a> · <a href="https://soundcloud.com/zjsmiles/rusty-reattachments" title="Rusty Reattachments" target="_blank" style="color: #cccccc; text-decoration: none;">Rusty Reattachments</a></div>',
+    description:
+      'In hindsight, I wasn’t fully healed, but I thought I was after spending a month with my family in Malaysia. Returning to Hong Kong triggered lots of old memories from the past, both lovely ones and sad ones. In truth, I was only back because Johnny and Edith were getting married. Early on when I first moved back to Hong Kong from uni in Manchester, Johnny was the only person I would go dancing with. He also witnessed my excitement with my first love and relationship. Now it was my turn to witness their union of love. If it wasn’t for that, I don’t think I would’ve gone back.\n\nI was also able to spend time with Kyle, Jeff, Tiff, Ro and Nathan. I think our relationship and bond are so familial, and I am so grateful. I’m able to be unapologetically my 12-year-old self whenever I’m around them.\n\nThis set I chose to curate, similar to how I prepared in the past after the LunarTribe X’mas set, but this time I think I took even more care, mostly because I was concerned with my lack of practice. I hadn’t played for a crowd the first year I moved to Australia the fact that I knew some local DJs I looked up to and respected heavily were going to be at Rustival, my anxiety and internal projections about their judgements about me drove me to my depths of OCD. It had to be perfect, but I think this time I got it, I prepared to almost the nth degree, and I was happy (albeit I accidentally skipped one song in the live version so hence I recorded it when I got back). I even got a standing ovation from the mentioned DJs, which was rewarding and validating. \n\nRevisiting Rustival, a beautiful event run by Vivian with the help of Zora, two amazingly talented and strong women in their own right, was always going to be challenging. I knew because, during the inauguration of the first Rustival, I was there with my significant other at the time. This time around, I was fortunate to be able to re-attach to an old flame, even though it was for just a fleeting moment, I think we had a lot of fun. I think the title of the mix speaks for itself.\n\nI curated this mix to be bouncy and venomous. I wanted to have a good time, to release all the pent-up energy I had from the year of not having that opportunity to play in Naarm, but also anger from a locked door. In some ways, it was also a little spiteful, and I knew that.',
+    tracklistImageSrc: '/5. Rusty Reattachments (Rustival) Tracklist.jpg',
+    tracklistImageAlt: 'Rusty Reattachments (Rustival) Tracklist',
+  },
+  {
+    title: 'Detach (December 2023)',
+    linkHref: 'https://soundcloud.com/zjsmiles/detatch-mixtape',
+    linkText: 'Listen on SoundCloud',
+    embedHtml:
+      '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1683711483&color=%23bcacc4&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/zjsmiles" title="gross margins" target="_blank" style="color: #cccccc; text-decoration: none;">gross margins</a> · <a href="https://soundcloud.com/zjsmiles/detatch-mixtape" title="Detach [Mixtape]" target="_blank" style="color: #cccccc; text-decoration: none;">Detach [Mixtape]</a></div>',
+    description:
+      'I loved her so much, as much as I hurt her. I didn’t realise love and attachment were two completely different things, and it took me a whole year to get over. For four years, we were so intertwined, yet it was heavily co-dependent. She was the first person outside of my family whom I had unconditional love for, and vice versa. The first person I had a relationship with, was the first person I was able to be entirely vulnerable with and be comfortable with it.\n\nNine months of 2023 was engrossed in trying to make things work. I was optimistically hopeful and yet blindingly naive that things would work out. In the end, the door slowly shut in my face, and I was locked out. To hear that metal lock click, was devastating. I want to thank my psychologist Reiko for helping me live.\n\nSubsequently in November, I went to visit my sister, Ying, for her graduation ceremony in Milan, it was during this trip I was revitalised by her love and support, but also the beauty in Milan. A few days of this week were also spent travelling alone, with my headphones in, I curated this mix, some old songs dug from the past and some new-ish songs introduced to me from partying at Miscellania.\n\nI think this mix not only represents the beginning of my detachment from a loved one but also my detachment from the pressures of life. In the end, what is it all for? I just want to be content with fulfilment. Learning that about myself allowed me to begin to slowly heal.\n\nI also really liked the photo I used for this mix’s artwork. The fence detached from its base. I’m the fence, and the vibrant leaves are our pictures. I found myself lying with the leaves so much, even though the leaves weren’t on the tree anymore. The memories of this beautiful tree were still so fresh, yet scattered on the floor, it was all I had to latch on to. As the leaves slowly blew away, in the same way, I think the mix represented the act of moving away from self-indulgent, destructive behaviours.',
+    tracklistImageSrc: '/6. Detach Tracklist.jpg',
+    tracklistImageAlt: 'Detach Tracklist',
+  },
+  {
+    title: 'X’Mas @ Mt. Davis – LunarTribe (December 2020)',
+    linkHref: 'https://soundcloud.com/zjsmiles/lunartribe-xmas-mt-davis',
+    linkText: 'Listen on SoundCloud',
+    embedHtml:
+      '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2006417443&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/zjsmiles" title="gross margins" target="_blank" style="color: #cccccc; text-decoration: none;">gross margins</a> · <a href="https://soundcloud.com/zjsmiles/lunartribe-xmas-mt-davis" title="LunarTribe X&#x27;mas @ Mt. Davis" target="_blank" style="color: #cccccc; text-decoration: none;">LunarTribe X&#x27;mas @ Mt. Davis</a></div>',
+    description:
+      'This set was so special to me because it felt like the beginning of DJ’ing outside of my bedroom, and simultaneously the end of my imposter syndrome with being a DJ. LunarTribe was where I played in front of people as an adult for the first time. Through LunarTribe, I was able to play at 15Grams too, and that to me is a huge spiritual honour.\n\nI was 22, one year into being an auditor, and slowly finding my feet as an adult in the small electronic scene in Hong Kong. To this day, I’m glad I met Aiden because not only did he introduce me to a lot of talented and beautiful souls but also taught me a lot about his process of creating. I was so used to this black-and-white school of thought, where there are right ways to do things, or else it’s incorrect. But through spending time with him, I learnt that there is no one way to get to the same outcome in the macro sense. Through Aiden I met Clement, who was so driven to create LunarTribe. LunarTribe was such a great group of people, though all beautiful things tend to end their course due to differing needs and wants, I felt that the parties we ran together, especially the months of preparation both mentally and physically leading up to a party, as well as the packing up of the parties was so fulfilling, so bonding. I really cherish those moments. Digging up dirt to create a flat surface in the bushes of Mount Davis, picking up toilet tissues at Park Island the day after the party, and carrying full electrical generators up and down stairs. It was so wholesome and rebellious at the same time.\n\nIt’s funny to think about it now but after this set, I was able to impress a few other talented DJs like Chuck, Vivian and Zora who later helped me get other gigs like playing at Social Room and Rustival. But throughout the next two years, for every ‘major’ set I played I had planned to the second. I prepared the sets so much because I didn’t want to make a mistake in mixing and flow. I had built up this pressure in my mind about receiving respect and recognition from all the established local DJs in Hong Kong. In the two years later, I was never able to recreate a set that I liked as much as this. I realised it was because I didn’t plan it to the nth degree (I can recall I only had three songs that I planned to play, to start, the peak and the end). I used to believe this spontaneity was the act of letting songs pick themselves rather than me picking them.\n\nLargely thanks to Aiden, I learnt that as a DJ, you’re just a medium for the universe to speak through, the Rick Rubin school of thought.  There weren’t any real intentions behind this mix apart from my eagerness to show off what I could bring to the table. I just wanted to play good music and get people dancing and bouncing. This night was also really special to me because it was the first time my life collided with Tifenn’s. Tifenn I adore you.',
+    tracklistImageSrc: '/7. LunarTribe - X_mas at @ Mt. Davis Tracklist.jpg',
+    tracklistImageAlt: "LunarTribe - X'mas @ Mt. Davis Tracklist",
+  },
+]
 
 export default function ZJ() {
   return (
-    <div className="min-h-screen p-8 pb-8 gap-2 sm:p-20 font-[family-name:var(--font-geist-sans)] flex flex-col justify-between relative">
+    <div className="min-h-screen p-8 pb-8 gap-2 sm:p-20 font-[family-name:var(--font-geist-sans)] flex flex-col relative">
       <BackgroundImage
         src="/mixes.avif"
         alt="Background"
@@ -27,43 +129,9 @@ export default function ZJ() {
         </div>
         <div className="w-[200px]" />
       </header>
-
-      
       <div className="text-white">
-          <p className="text-2xl font-bold max-w-2xl tracking-wider">
-          [untitled] Solace Radio (August 2025) 
-          </p>
-          <p className="text-sm font-normal">EP, released 25/01/2025</p>
-
-          <p className="mt-6 text-l italic max-w-2xl tracking-wider">
-          I foraged in the forest of Gott, but <br />
-          in excess, the Leftover Salad lay. <br />
-          Rushed to leave in glut, the bowl Tilt-ed, <br />  
-          slowly falling onto the ground, I Gasp.<br />
-          </p>
-          <iframe 
-            className="mt-6"
-            style={{ border: 0, width: '280px', height: '280px' }} 
-            src="https://bandcamp.com/EmbeddedPlayer/album=1345805150/size=large/bgcol=333333/linkcol=ffffff/minimal=true/transparent=true/" 
-            seamless
-          />
+        <FaqDisclosure faqs={faqs} />
       </div>
-      <div className="text-white mt-16">
-          <Link href="https://findmerecords.bandcamp.com/album/concrete-jungle" className="text-2xl font-bold max-w-2xl tracking-wider">
-            Concrete Jungle
-          </Link>
-          <p className="text-sm font-normal tracking-wider">EP, released 23/03/2024</p>
-          <p className="mt-6 text-l tracking-wider max-w-2xl font-normal">
-          After spending my formative years in the UK, I returned to Hong Kong as an auditor, only to discover a stark contrast from my memories as a 10-year-old. This EP is my memoir of the Yellow Umbrella movement protests, COVID-19, and quitting my first corporate job to follow my passions, and saying goodbye to my childhood home.
-
-          </p>
-          <iframe 
-            className="mt-6" 
-            style={{ border: 0, width: '280px', height: '280px' }} 
-            src="https://bandcamp.com/EmbeddedPlayer/album=3342620367/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" 
-            seamless
-          />
-      </div>
-    </div>
+        </div>
   );
 } 
