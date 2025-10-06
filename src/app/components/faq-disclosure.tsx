@@ -29,7 +29,7 @@ export default function FaqDisclosure({ faqs }: FaqDisclosureProps) {
           {({ open }) => (
             <>
               <dt className="font-normal">
-                <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900 dark:text-white">
+                <DisclosureButton className="group flex w-full items-start justify-between text-left text-white">
                   <span className="text-base/7 font-semibold">{faq.title}</span>
                   <span className="ml-6 flex h-7 items-center">
                     {open ? (
@@ -42,7 +42,7 @@ export default function FaqDisclosure({ faqs }: FaqDisclosureProps) {
               </dt>
               <DisclosurePanel as="dd" className="mt-4 pr-0 sm:pr-12">
                 {faq.linkHref && (
-                  <p className="text-sm/6 mb-3">
+                  <p className="text-sm/6 mb-3 text-white">
                     <a
                       href={faq.linkHref}
                       target="_blank"
@@ -62,11 +62,11 @@ export default function FaqDisclosure({ faqs }: FaqDisclosureProps) {
                 )}
                 {faq.descriptionHtml ? (
                   <div
-                    className="mt-4 text-base/7 text-gray-100/90 dark:text-gray-200/90 whitespace-pre-line"
+                    className="mt-4 text-base/7 text-white/90 whitespace-pre-line"
                     dangerouslySetInnerHTML={{ __html: faq.descriptionHtml }}
                   />
                 ) : faq.description ? (
-                  <p className="mt-4 text-base/7 text-gray-100/90 dark:text-gray-200/90 whitespace-pre-line">
+                  <p className="mt-4 text-base/7 text-white/90 whitespace-pre-line">
                     {faq.description}
                   </p>
                 ) : null}
