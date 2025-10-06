@@ -6,6 +6,16 @@ type InstagramEmbedProps = {
   permalink: string; // e.g., https://www.instagram.com/reel/....
 };
 
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds?: {
+        process: () => void;
+      };
+    };
+  }
+}
+
 export default function InstagramEmbed({ permalink }: InstagramEmbedProps) {
   useEffect(() => {
     const existing = document.querySelector('script#ig-embed');
@@ -14,9 +24,12 @@ export default function InstagramEmbed({ permalink }: InstagramEmbedProps) {
       s.id = 'ig-embed';
       s.async = true;
       s.src = '//www.instagram.com/embed.js';
+      s.onload = () => {
+        window.instgrm?.Embeds?.process?.();
+      };
       document.body.appendChild(s);
-    } else if (window && (window as any).instgrm?.Embeds?.process) {
-      (window as any).instgrm.Embeds.process();
+    } else {
+      window.instgrm?.Embeds?.process?.();
     }
   }, []);
 
