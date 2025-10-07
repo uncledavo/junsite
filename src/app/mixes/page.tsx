@@ -110,6 +110,7 @@ export default function ZJ() {
         src="/mixes.avif"
         alt="Background"
         className="opacity-0 animate-fade-in"
+        mode="viewport"
       />
       
       <header className="flex justify-between items-start mb-8 relative">
