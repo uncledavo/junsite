@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
+import { Cambo } from 'next/font/google'
 import "./globals.css";
 import CursorWrapper from './components/cursor-wrapper';
 
@@ -8,6 +9,13 @@ const feedbackFont = localFont({
   variable: '--font-feedback',
   preload: true,
   display: 'swap', // Optimize font loading
+})
+
+const cambo = Cambo({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-cambo',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -27,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={feedbackFont.variable}>
-      <body className="font-feedback">
+    <html lang="en" className={`${feedbackFont.variable} ${cambo.variable}`}>
+      <body className="font-cambo">
         <CursorWrapper />
         {children}
       </body>

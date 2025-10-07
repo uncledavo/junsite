@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         feedback: ['feedback', 'sans-serif'],
+        cambo: ['var(--font-cambo)', 'serif'],
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',

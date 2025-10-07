@@ -3,6 +3,6 @@
 - [x] Update other mediums page, with embed of the material, title below, stacked (no toggle)
 - [x] Change images in other mediums page to be 50%
 - [ ] Fix issue of bg changing size in other mediums page on toggle
-- [ ] Add new font
+- [x] Add new font
 - [ ] Think of design
 - [ ] Fix metadata
