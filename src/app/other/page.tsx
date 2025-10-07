@@ -29,21 +29,21 @@ export default function ZJ() {
         <div className="w-[200px]" />
       </header>
       <div className="text-white">
-      <p className="text-xl max-w-2xl tracking-wider">
+      <p className="text-sm max-w-2xl tracking-wider">
       I occasionally dabble in amateur film photography, all photos in the background and some used in my artworks for are taken from using a Canon AEP-1.
           </p>
-          <p className="text-2xl font-bold max-w-2xl tracking-wider pt-16">
+          <p className="text-sm font-semibold max-w-2xl tracking-wider pt-16">
           Chinese Dictionary feat. Tifenn
           </p>
           <div className="mt-8">
             <InstagramEmbed permalink="https://www.instagram.com/reel/Cpk13ScD-C7/?utm_source=ig_embed&amp;utm_campaign=loading" />
           </div>
 
-          <p className="text-2xl font-bold max-w-2xl tracking-wider pt-16">
+          <p className="text-sm font-semibold max-w-2xl tracking-wider pt-16">
           In The End It Always Does (short film by Madeleine Perdrian)
           </p>
            <p className="text-sm font-normal tracking-wider">Maddy&apos;s Collarts Assessment (22/08/2024)</p>
-           <p className="text-sm font-normal tracking-wider">Music Used: &quot;Sunshine Baby&quot; by The Japanese House</p>
+           <p className="text-sm font-normal tracking-wider italic">Music Used: &quot;Sunshine Baby&quot; by The Japanese House</p>
            <iframe 
              className="mt-8 w-full max-w-3xl"
              src="https://drive.google.com/file/d/1HqNxEb8NZlCzNWYVU42NUjycSTZW6jQQ/preview"
@@ -52,7 +52,7 @@ export default function ZJ() {
              allow="autoplay"
            />
 
-<p className="text-2xl font-bold max-w-2xl tracking-wider pt-16">
+<p className="text-sm font-semibold max-w-2xl tracking-wider pt-16">
 Capture (Re-Soundtracked)
           </p>
            <p className="text-sm font-normal tracking-wider">Collarts MPMPT3 - Sound Design: Music for Image, Assessment Task 2 – Short Film Soundtrack (22/08/2024)
@@ -65,12 +65,12 @@ Capture (Re-Soundtracked)
              allow="autoplay"
            />
 
-<p className="text-2xl font-bold max-w-2xl tracking-wider pt-16">
+<p className="text-sm font-semibold max-w-2xl tracking-wider pt-16">
 Alien: Romulus (Re-Soundtracked)
           </p>
            <p className="text-sm font-normal tracking-wider">Collarts MPMPD4 - Technology in Performance 2, Assessment 3 – Ensemble Production/Visual Assessment (04/12/2024)
            </p>
-           <p className="text-sm font-normal tracking-wider">Led by Benjamin Colbourne with Aaron Clarke, Gabriel Bermeo & Nyuon Gatluak.</p>
+           <p className="text-sm font-normal tracking-wider italic">Led by Benjamin Colbourne with Aaron Clarke, Gabriel Bermeo & Nyuon Gatluak.</p>
            <iframe 
              className="mt-8 w-full max-w-3xl"
              src="https://drive.google.com/file/d/1R-YnZAcZC7LT3HOGlBKRuzWGjTohZcTK/preview"

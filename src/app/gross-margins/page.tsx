@@ -28,7 +28,7 @@ export default function GrossMargins() {
         <div className="w-[200px]" />
       </header>
       <div className="text-white">
-          <p className="text-2xl font-bold max-w-2xl tracking-wider">
+          <p className="text-base/7 font-semibold">
             coming soon
           </p>
       </div>

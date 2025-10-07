@@ -28,12 +28,12 @@ export default function ZJ() {
         <div className="w-[200px]" />
       </header>
       <div className="text-white">
-          <p className="text-2xl font-bold max-w-2xl tracking-wider">
+          <p className="text-base/7 font-semibold">
             Play, Though? 
           </p>
           <p className="text-sm font-normal">EP, released 25/01/2025</p>
 
-          <p className="mt-6 text-l italic max-w-2xl tracking-wider">
+          <p className="mt-6 text-sm italic max-w-2xl tracking-wider">
           I foraged in the forest of Gott, but <br />
           in excess, the Leftover Salad lay. <br />
           Rushed to leave in glut, the bowl Tilt-ed, <br />  
@@ -47,11 +47,11 @@ export default function ZJ() {
           />
       </div>
       <div className="text-white mt-16">
-          <Link href="https://findmerecords.bandcamp.com/album/concrete-jungle" className="text-2xl font-bold max-w-2xl tracking-wider">
+          <Link href="https://findmerecords.bandcamp.com/album/concrete-jungle" className="text-base/7 font-semibold">
             Concrete Jungle
           </Link>
           <p className="text-sm font-normal tracking-wider">EP, released 23/03/2024</p>
-          <p className="mt-6 text-l tracking-wider max-w-2xl font-normal">
+          <p className="mt-6 text-sm tracking-wider max-w-2xl font-normal">
           After spending my formative years in the UK, I returned to Hong Kong as an auditor, only to discover a stark contrast from my memories as a 10-year-old. This EP is my memoir of the Yellow Umbrella movement protests, COVID-19, and quitting my first corporate job to follow my passions, and saying goodbye to my childhood home.
 
           </p>
