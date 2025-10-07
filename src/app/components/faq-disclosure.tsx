@@ -77,8 +77,8 @@ export default function FaqDisclosure({ faqs }: FaqDisclosureProps) {
                       alt={faq.tracklistImageAlt ?? 'Tracklist image'}
                       width={1600}
                       height={1200}
-                      sizes="100vw"
-                      className="rounded-md shadow-md h-auto w-full"
+                      sizes="50vw"
+                      className="rounded-md shadow-md h-auto w-1/2"
                     />
                   </div>
                 ) : faq.tracklistNote ? (
