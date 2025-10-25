@@ -29,8 +29,22 @@ export default function GrossMargins() {
       </header>
       <div className="text-white">
           <p className="text-base/7 font-semibold">
-            coming soon
+          Backpocket Slammers: Volume 4
           </p>
+          <p className="text-sm font-normal">Various Artists, released 05/11/2025</p>
+
+          {/* <p className="mt-6 text-sm italic max-w-2xl tracking-wider">
+          I foraged in the forest of Gott, but <br />
+          in excess, the Leftover Salad lay. <br />
+          Rushed to leave in glut, the bowl Tilt-ed, <br />  
+          slowly falling onto the ground, I Gasp.<br />
+          </p> */}
+          <iframe 
+            className="mt-6"
+            style={{ border: 0, width: '280px', height: '280px' }} 
+            src="https://bandcamp.com/EmbeddedPlayer/album=2839537834/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" 
+            seamless
+          />
       </div>
     </div>
   );
