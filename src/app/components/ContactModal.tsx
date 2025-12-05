@@ -20,17 +20,13 @@ export default function ContactModal() {
           onClick={() => setIsOpen(false)}
         >
           <div className="text-2xl font-feedback tracking-wider">
-            <p>junandgames@gmail.com</p>
-            <p className="text-center">
-              <a 
-                href="https://www.linkedin.com/in/jun-ong/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                LinkedIn
-              </a>
-            </p>
+            <a 
+              href="mailto:junandgames@gmail.com"
+              onClick={(e) => e.stopPropagation()}
+              className="hover:opacity-60 transition-opacity"
+            >
+              junandgames@gmail.com
+            </a>
           </div>
         </div>
       )}
