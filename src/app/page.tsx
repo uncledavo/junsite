@@ -1,5 +1,6 @@
 import Link from "next/link";
 import WebsiteModal from './components/WebsiteModal';
+import ContactModal from './components/ContactModal';
 import BackgroundImage from './components/BackgroundImage';
 
 export default function Home() {
@@ -85,6 +86,7 @@ export default function Home() {
           soundcloud
         </a>
         <WebsiteModal />
+        <ContactModal />
       </footer>
     </div>
   );
