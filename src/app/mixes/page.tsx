@@ -127,10 +127,10 @@ export default function ZJ() {
       <header className="flex justify-between items-start mb-8 relative">
         <div className="flex flex-col gap-2">
           <h1 
-            className="text-2xl font-feedback tracking-wider"
+            className="text-2xl font-feedback tracking-wider whitespace-nowrap"
             style={{ viewTransitionName: 'title' }}
           >
-            mixes as journal entries
+            journal entries
           </h1>
           <Link 
             href="/"

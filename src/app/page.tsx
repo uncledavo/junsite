@@ -45,7 +45,7 @@ export default function Home() {
                 href="/mixes"
                 className="font-feedback tracking-wider transition-all duration-200 hover:blur-[2px] text-right block"
               >
-                mixes as journal entries
+                journal entries
               </Link>
             </li>
             <li>
