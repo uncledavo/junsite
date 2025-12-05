@@ -134,6 +134,7 @@ export default function ZJ() {
         className="opacity-0 animate-fade-in"
         mode="viewport"
       />
+      <div className="fixed inset-0 -z-10 bg-black/40 pointer-events-none" />
       
       <header className="flex justify-between items-start mb-8 relative">
         <div className="flex flex-col gap-2">
